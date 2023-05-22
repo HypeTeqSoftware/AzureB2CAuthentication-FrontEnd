@@ -1,0 +1,60 @@
+ 
+    <!-- <div class="b-example-divider"></div> -->
+    <!-- <header class="p-3 mb-3 border-bottom">
+
+              <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+
+                 <li><a class="dropdown-item" *ngIf="loginDisplay" (click)="editProfile()">Edit Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" *ngIf="!loginDisplay" (click)="login()">Login</a></li>
+                <li><a class="dropdown-item" *ngIf="loginDisplay" (click)="logout()">Sign out</a></li> 
+              </ul>
+
+      </header> -->
+      <div class="card card-custom" style="display: flex; justify-content: center;">
+
+
+       
+        <div class="card-header py-3">
+      
+          <div class="card-title">
+            <h3 class="card-label"> Azure B2C Authentication
+
+            </h3>
+          </div>
+      
+          <div class="card-toolbar">
+
+            <button type="button" class="btn btn-primary" *ngIf="loginDisplay">
+              <a (click)="editProfile()">Edit Profile</a>
+            </button>
+
+            <button type="button" class="btn btn-primary" *ngIf="loginDisplay">
+              <a (click)="passwordReset()">RESET password</a>
+            </button>
+            <!--check-->
+
+            <button type="button" class="btn btn-primary"  *ngIf="!loginDisplay">
+              <a  (click)="login()">Login</a>
+            </button>
+
+
+            <button type="button" class="btn btn-primary"  *ngIf="loginDisplay">
+              <a  (click)="logout()">Sign out</a>
+            </button>
+
+
+            <button type="button" class="btn btn-primary"  *ngIf="loginDisplay">
+              <a (click)="APICall()">Call an API</a>
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div style="margin:20px">
+        <label>
+          {{responseFromAPI}}
+        </label>
+      </div>
